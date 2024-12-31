@@ -11,114 +11,124 @@
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <HBox prefHeight="750.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <VBox prefHeight="750.0" prefWidth="472.0" style="-fx-background-color: #595656;" HBox.hgrow="ALWAYS">
-               <children>
-                  <HBox prefHeight="100.0" prefWidth="500.0" spacing="10.0">
-                     <children>
-                        <FontIcon fill="WHITE" iconLiteral="bi-arrow-return-left" iconSize="30" />
-                        <Label text="Back to Homepage" textFill="WHITE">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Label>
-                     </children>
-                     <padding>
-                        <Insets left="20.0" top="20.0" />
-                     </padding>
-                  </HBox>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
-                     <children>
-                        <FontIcon iconLiteral="bi-building" iconSize="250" />
-                        <Label lineSpacing="10.0" text="Rental " textAlignment="CENTER" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="45.0" />
-                           </font>
-                        </Label>
-                        <Label lineSpacing="10.0" text="Management " textAlignment="CENTER" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="45.0" />
-                           </font>
-                        </Label>
-                        <Label lineSpacing="10.0" text=" System" textAlignment="CENTER" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="45.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </VBox>
-               </children>
-            </VBox>
-            <VBox layoutX="10.0" layoutY="10.0" prefHeight="750.0" prefWidth="472.0" style="-fx-background-color: #ffffff;">
-               <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <FontIcon iconLiteral="bi-person" iconSize="150" />
-                        <Label text="Log In">
-                           <font>
-                              <Font name="System Bold" size="30.0" />
-                           </font>
-                        </Label>
-                     </children>
-                     <VBox.margin>
-                        <Insets bottom="20.0" top="30.0" />
-                     </VBox.margin>
-                  </VBox>
-                  <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
-                     <children>
-                        <Label alignment="CENTER" text="User name:" >
-                           <VBox.margin>
-                              <Insets left="30.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font name="System Bold" size="14.0" />
-                           </font>
-                        </Label>
-                        <TextField alignment="CENTER">
-                           <VBox.margin>
-                              <Insets left="30.0" right="30.0" />
-                           </VBox.margin>
-                        </TextField>
-                        <Label alignment="CENTER" layoutX="218.0" layoutY="88.0" text="Password:">
-                           <VBox.margin>
-                              <Insets left="30.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font name="System Bold" size="14.0" />
-                           </font>
-                        </Label>
-                        <TextField alignment="CENTER" layoutX="40.0" layoutY="106.0">
-                           <VBox.margin>
-                              <Insets left="30.0" right="30.0" />
-                           </VBox.margin>
-                        </TextField>
-                     </children>
-                  </VBox>
-                  <VBox alignment="CENTER" prefHeight="113.0" prefWidth="472.0" spacing="10.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="138.0" text="Login" textAlignment="CENTER">
-                           <VBox.margin>
-                              <Insets top="15.0" />
-                           </VBox.margin>
-                        </Button>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="No account yet? Register here" textAlignment="CENTER">
-                           <VBox.margin>
-                              <Insets top="15.0" />
-                           </VBox.margin>
-                        </Text>
-                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="111.0" text="Register" textAlignment="CENTER">
-                           <VBox.margin>
-                              <Insets top="15.0" />
-                           </VBox.margin>
-                        </Button>
-                     </children>
-                  </VBox>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-   </children>
+<AnchorPane fx:controller="hoangvaha.frontend.controllers.LoginController" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1 ">
+    <children>
+        <HBox prefHeight="750.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox prefHeight="750.0" prefWidth="472.0" style="-fx-background-color: #595656;" HBox.hgrow="ALWAYS">
+                    <children>
+                        <HBox prefHeight="100.0" prefWidth="500.0" spacing="10.0">
+                            <children>
+                                <FontIcon fill="WHITE" iconLiteral="bi-arrow-return-left" iconSize="30"/>
+                                <Label text="Back to Homepage" textFill="WHITE">
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                            <padding>
+                                <Insets left="20.0" top="20.0"/>
+                            </padding>
+                        </HBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                            <children>
+                                <FontIcon iconLiteral="bi-building" iconSize="250"/>
+                                <Label lineSpacing="10.0" text="Rental " textAlignment="CENTER" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="45.0"/>
+                                    </font>
+                                </Label>
+                                <Label lineSpacing="10.0" text="Management " textAlignment="CENTER" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="45.0"/>
+                                    </font>
+                                </Label>
+                                <Label lineSpacing="10.0" text=" System" textAlignment="CENTER" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="45.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+                <VBox layoutX="10.0" layoutY="10.0" prefHeight="750.0" prefWidth="472.0"
+                      style="-fx-background-color: #ffffff;">
+                    <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                            <children>
+                                <FontIcon iconLiteral="bi-person" iconSize="150"/>
+                                <Label text="Log In">
+                                    <font>
+                                        <Font name="System Bold" size="30.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="20.0" top="30.0"/>
+                            </VBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0"
+                              spacing="10.0">
+                            <children>
+                                <Label alignment="CENTER" text="User name:">
+                                    <VBox.margin>
+                                        <Insets left="30.0"/>
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Label>
+                                <TextField alignment="CENTER">
+                                    <VBox.margin>
+                                        <Insets left="30.0" right="30.0"/>
+                                    </VBox.margin>
+                                </TextField>
+                                <Label alignment="CENTER" layoutX="218.0" layoutY="88.0" text="Password:">
+                                    <VBox.margin>
+                                        <Insets left="30.0"/>
+                                    </VBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                </Label>
+                                <TextField alignment="CENTER" layoutX="40.0" layoutY="106.0">
+                                    <VBox.margin>
+                                        <Insets left="30.0" right="30.0"/>
+                                    </VBox.margin>
+                                </TextField>
+                            </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="113.0" prefWidth="472.0" spacing="10.0">
+                            <children>
+                                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="138.0" text="Login"
+                                        textAlignment="CENTER">
+                                    <VBox.margin>
+                                        <Insets top="15.0"/>
+                                    </VBox.margin>
+                                </Button>
+                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="No account yet? Register here"
+                                      textAlignment="CENTER">
+                                    <VBox.margin>
+                                        <Insets top="15.0"/>
+                                    </VBox.margin>
+                                </Text>
+                                <Button fx:id="registerButton" mnemonicParsing="false" prefHeight="26.0"
+                                        prefWidth="111.0" text="Register" textAlignment="CENTER"
+                                        onAction="#goToRegister">
+                                    <VBox.margin>
+                                        <Insets top="15.0"/>
+                                    </VBox.margin>
+                                </Button>
+
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
 </AnchorPane>
