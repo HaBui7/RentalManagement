@@ -9,6 +9,10 @@ module hoangvaha.frontend {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires javafx.base;
+    requires javafx.graphics;
+    requires org.kordamp.ikonli.core;
+    requires org.kordamp.ikonli.bootstrapicons;
 
 //    opens hoangvaha.frontend to javafx.fxml;
 //    exports hoangvaha.frontend;
