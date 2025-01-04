@@ -7,10 +7,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class LoginPage extends Application {
+public class TenantPage extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginPage.class.getResource("/hoangvaha/frontend/fxml/login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(TenantPage.class.getResource("/hoangvaha/frontend/fxml/tenantHomePage.fxml"));
         Scene loginScene = new Scene(fxmlLoader.load());
         String css = getClass().getResource("/hoangvaha/frontend/styles/style.css").toExternalForm();
         loginScene.getStylesheets().add(css);

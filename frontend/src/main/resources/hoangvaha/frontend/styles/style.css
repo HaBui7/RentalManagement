@@ -1,0 +1,7 @@
+.loginButton:hover {
+    -fx-background-color: #F19443;
+}
+
+.registerButton:hover {
+    -fx-background-color: #99B0EC;
+}
