@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="750" prefWidth="1000" xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="hoangvaha.frontend.controllers.MainLayoutController">
+    <!-- Fixed Navbar -->
+    <left>
+        <fx:include source="navBar.fxml" fx:id="navBar"/>
+    </left>
+
+    <!-- Dynamic Content Area -->
+    <center>
+        <StackPane fx:id="contentArea"/>
+    </center>
+</BorderPane>
+

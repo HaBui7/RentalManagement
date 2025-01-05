@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TextField?>
+<AnchorPane prefHeight="750" prefWidth="650" xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="hoangvaha.frontend.controllers.TenantController">
+
+    <!-- Main Content Area -->
+    <HBox alignment="CENTER_LEFT" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
+          AnchorPane.topAnchor="0">
+
+        <!-- Right Content -->
+        <VBox alignment="TOP_CENTER" prefHeight="750" prefWidth="797.0" spacing="20.0">
+            <!-- Top Box: Table Section -->
+            <VBox alignment="TOP_CENTER" prefWidth="750.0" spacing="10">
+                <HBox alignment="CENTER_LEFT" prefHeight="40" spacing="10">
+                    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Rental Agreements"/>
+                    <TextField prefWidth="200" promptText="Search by ID"/>
+                    <Button text="Search"/>
+                    <Button text="Sort"/>
+                </HBox>
+
+                <ScrollPane fitToHeight="true" fitToWidth="true">
+                    <TableView fx:id="propertyTableView">
+                        <!-- Define columns in the controller -->
+                    </TableView>
+                </ScrollPane>
+            </VBox>
+        </VBox>
+    </HBox>
+    <padding>
+        <Insets left="10.0" right="10.0"/>
+    </padding>
+</AnchorPane>

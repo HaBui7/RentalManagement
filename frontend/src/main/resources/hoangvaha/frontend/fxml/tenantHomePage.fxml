@@ -13,14 +13,14 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="750" prefWidth="1000" xmlns="http://javafx.com/javafx/23.0.1"
+<AnchorPane prefHeight="750" prefWidth="650" xmlns="http://javafx.com/javafx/23.0.1"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="hoangvaha.frontend.controllers.TenantController">
 
     <!-- Main Content Area -->
     <HBox alignment="CENTER_LEFT" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
           AnchorPane.topAnchor="0">
-        <!-- Include Navigation Bar -->
-        <fx:include source="navBar.fxml"/>
+        <!--        &lt;!&ndash; Include Navigation Bar &ndash;&gt;-->
+        <!--        <fx:include source="navBar.fxml"/>-->
 
         <!-- Right Content -->
         <VBox alignment="TOP_CENTER" prefHeight="750" prefWidth="797.0" spacing="20.0">
@@ -31,8 +31,10 @@
                     <RadioButton fx:id="commercialRadioButton" text="Commercial Property"/>
                     <RadioButton fx:id="residentialRadioButton" text="Residential Property"/>
                     <TextField fx:id="searchTextField" prefWidth="200" promptText="Search by ID"/>
+                    <Button fx:id="searchButton" text="Search"/>
                     <Button fx:id="sortButton" text="Sorting"/>
                 </HBox>
+
                 <ScrollPane fitToHeight="true" fitToWidth="true">
                     <TableView fx:id="propertyTableView">
 

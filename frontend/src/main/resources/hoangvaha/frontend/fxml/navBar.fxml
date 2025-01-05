@@ -9,111 +9,94 @@
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane prefHeight="750.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/23.0.1"
-            xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="750.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hoangvaha.frontend.controllers.TenantNavBarController">
     <children>
-        <HBox layoutX="14.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0"
-              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <HBox layoutX="14.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                 <VBox prefHeight="750.0" prefWidth="350.0" style="-fx-background-color: #595656;">
                     <children>
                         <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                            <!-- Welcome Section -->
                             <children>
                                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                                     <children>
                                         <FontIcon fill="WHITE" iconLiteral="bi-person-circle" iconSize="150">
-                                            <HBox.margin>
-                                                <Insets/>
-                                            </HBox.margin>
-                                        </FontIcon>
-                                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false"
-                                                style="-fx-background-color: #595656;" textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin></FontIcon>
+                                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleProfile" style="-fx-background-color: #595656;" textFill="WHITE">
                                             <font>
-                                                <Font size="25.0"/>
+                                                <Font size="25.0" />
                                             </font>
                                             <graphic>
-                                                <FontIcon iconColor="WHITE" iconLiteral="bi-pencil-square"/>
+                                                <FontIcon iconColor="WHITE" iconLiteral="bi-pencil-square" />
                                             </graphic>
                                         </Button>
                                     </children>
-                                    <VBox.margin>
-                                        <Insets left="50.0"/>
-                                    </VBox.margin>
+                           <padding>
+                              <Insets left="50.0" top="10.0" />
+                           </padding>
                                 </HBox>
                                 <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome,">
                                     <font>
-                                        <Font size="30.0"/>
+                                        <Font size="30.0" />
                                     </font>
                                 </Text>
                                 <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Tenant">
                                     <font>
-                                        <Font name="System Bold" size="30.0"/>
+                                        <Font name="System Bold" size="30.0" />
                                     </font>
                                 </Text>
                             </children>
-                            <padding>
-                                <Insets top="30.0"/>
-                            </padding>
                         </VBox>
+
+                        <!-- Navigation Buttons -->
                         <VBox prefHeight="459.0" prefWidth="350.0" spacing="30.0">
                             <children>
-                                <Button alignment="BASELINE_LEFT" mnemonicParsing="false"
-                                        style="-fx-background-color: #595656;" text="Home" textFill="WHITE">
+                                <Button fx:id="homeButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleHome" style="-fx-background-color: #595656;" text="Home" textFill="WHITE">
                                     <graphic>
-                                        <FontIcon fill="WHITE" iconLiteral="bi-intersect" iconSize="40"/>
+                                        <FontIcon fill="WHITE" iconLiteral="bi-intersect" iconSize="40" />
                                     </graphic>
                                     <font>
-                                        <Font size="25.0"/>
+                                        <Font size="25.0" />
                                     </font>
                                 </Button>
-                                <Button alignment="BASELINE_LEFT" mnemonicParsing="false"
-                                        style="-fx-background-color: #595656;" text="Rental Agreement" textFill="WHITE">
+                                <Button fx:id="rentalAgreementButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleTenantRA" style="-fx-background-color: #595656;" text="Rental Agreement" textFill="WHITE">
                                     <font>
-                                        <Font size="25.0"/>
+                                        <Font size="25.0" />
                                     </font>
                                     <graphic>
-                                        <FontIcon iconColor="WHITE" iconLiteral="bi-journal-text" iconSize="40"
-                                                  text=""/>
+                                        <FontIcon iconColor="WHITE" iconLiteral="bi-journal-text" iconSize="40" />
                                     </graphic>
                                 </Button>
-                                <Button alignment="BASELINE_LEFT" mnemonicParsing="false"
-                                        style="-fx-background-color: #595656;" text="Rented Property" textFill="WHITE">
+                                <Button fx:id="rentedPropertyButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleRentedProperty" style="-fx-background-color: #595656;" text="Rented Property" textFill="WHITE">
                                     <font>
-                                        <Font size="25.0"/>
+                                        <Font size="25.0" />
                                     </font>
                                     <graphic>
-                                        <FontIcon iconColor="WHITE" iconLiteral="bi-building" iconSize="40"/>
+                                        <FontIcon iconColor="WHITE" iconLiteral="bi-building" iconSize="40" />
                                     </graphic>
                                 </Button>
-                                <Button alignment="BASELINE_LEFT" mnemonicParsing="false"
-                                        style="-fx-background-color: #595656;" text="Manage Payments" textFill="WHITE">
+                                <Button fx:id="managePaymentsButton" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleTenantPayments" style="-fx-background-color: #595656;" text="Manage Payments" textFill="WHITE">
                                     <font>
-                                        <Font size="25.0"/>
+                                        <Font size="25.0" />
                                     </font>
                                     <graphic>
-                                        <FontIcon iconColor="WHITE" iconLiteral="bi-cash" iconSize="40"/>
+                                        <FontIcon iconColor="WHITE" iconLiteral="bi-cash" iconSize="40" />
                                     </graphic>
                                 </Button>
-                                <Button alignment="BASELINE_LEFT" mnemonicParsing="false"
-                                        style="-fx-background-color: #595656;" text="Sign Out" textFill="WHITE">
+                                <Button fx:id="signOutButton" alignment="BASELINE_LEFT" mnemonicParsing="false" style="-fx-background-color: #595656;" text="Sign Out" textFill="WHITE">
                                     <font>
-                                        <Font size="25.0"/>
+                                        <Font size="25.0" />
                                     </font>
                                     <graphic>
-                                        <FontIcon iconColor="WHITE" iconLiteral="bi-door-open" iconSize="40"/>
+                                        <FontIcon iconColor="WHITE" iconLiteral="bi-door-open" iconSize="40" />
                                     </graphic>
-                                    <VBox.margin>
-                                        <Insets top="30.0"/>
-                                    </VBox.margin>
                                 </Button>
                             </children>
                         </VBox>
                     </children>
-                    <HBox.margin>
-                        <Insets/>
-                    </HBox.margin>
                 </VBox>
-                <VBox prefHeight="750.0" prefWidth="0.0"/>
             </children>
         </HBox>
     </children>
