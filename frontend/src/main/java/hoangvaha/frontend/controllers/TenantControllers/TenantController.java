@@ -1,4 +1,4 @@
-package hoangvaha.frontend.controllers;
+package hoangvaha.frontend.controllers.TenantControllers;
 
 import hoangvaha.frontend.Models.CommercialProperty;
 import hoangvaha.frontend.Models.ResidentialProperty;

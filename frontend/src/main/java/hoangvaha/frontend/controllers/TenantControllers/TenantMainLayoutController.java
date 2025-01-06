@@ -1,14 +1,12 @@
-package hoangvaha.frontend.controllers;
+package hoangvaha.frontend.controllers.TenantControllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.StackPane;
 
-import hoangvaha.frontend.controllers.TenantNavBarController;
-
 import java.io.IOException;
 
-public class MainLayoutController {
+public class TenantMainLayoutController {
     @FXML
     private StackPane contentArea;
 
@@ -17,11 +15,11 @@ public class MainLayoutController {
 
     @FXML
     public void initialize() {
-        // The fx:include automatically loads the navBar.fxml, and JavaFX sets the controller.
+        // The fx:include automatically loads the tenantNavBar.fxml, and JavaFX sets the controller.
         navBarController.setMainController(this); // Link the MainLayoutController
         try {
             // Automatically load the homepage on initialization
-            loadPage("/hoangvaha/frontend/fxml/tenantHomePage.fxml");
+            loadPage("/hoangvaha/frontend/fxml/tenant/tenantHomePage.fxml");
         } catch (Exception e) {
             e.printStackTrace();
         }
