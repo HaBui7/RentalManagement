@@ -14,13 +14,13 @@
 <?import javafx.scene.layout.VBox?>
 
 <AnchorPane prefHeight="750" prefWidth="650" xmlns="http://javafx.com/javafx/23.0.1"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="hoangvaha.frontend.controllers.TenantController">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="hoangvaha.frontend.controllers.TenantControllers.TenantController">
 
     <!-- Main Content Area -->
     <HBox alignment="CENTER_LEFT" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0"
           AnchorPane.topAnchor="0">
         <!--        &lt;!&ndash; Include Navigation Bar &ndash;&gt;-->
-        <!--        <fx:include source="navBar.fxml"/>-->
+        <!--        <fx:include source="tenantNavBar.fxml"/>-->
 
         <!-- Right Content -->
         <VBox alignment="TOP_CENTER" prefHeight="750" prefWidth="797.0" spacing="20.0">

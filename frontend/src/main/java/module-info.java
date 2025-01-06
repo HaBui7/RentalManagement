@@ -20,4 +20,8 @@ module hoangvaha.frontend {
     opens hoangvaha.frontend.views to javafx.fxml;
     exports hoangvaha.frontend.controllers;
     opens hoangvaha.frontend.controllers to javafx.fxml;
+    exports hoangvaha.frontend.controllers.TenantControllers;
+    opens hoangvaha.frontend.controllers.TenantControllers to javafx.fxml;
+    exports hoangvaha.frontend.controllers.OwnerControllers;
+    opens hoangvaha.frontend.controllers.OwnerControllers to javafx.fxml;
 }
