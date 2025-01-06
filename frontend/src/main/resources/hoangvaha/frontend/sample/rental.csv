@@ -2,5 +2,4 @@ r-1,Property-1,Owner B,Host-1,t-2,t-3,12 months,100,Terminated
 r-1,Property-2,Owner C,Host-2,t-1,t-2,t-3,12 months,100,Active
 property, owner, host, mainTenant, period, rentingFee, status
 
-r-10,Owner C,Owner B,Host-9,t-2,t-3,12 months,100,Terminated
 R1234,Owner B,Host-2,John Doe,12 months,200,Active

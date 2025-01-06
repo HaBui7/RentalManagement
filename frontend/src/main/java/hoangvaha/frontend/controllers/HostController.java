@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.io.BufferedWriter;
@@ -47,7 +48,8 @@ public class HostController implements Initializable {
     // --- Fields for the "Update" section in FXML ---
     @FXML
     private TextField rentalIdInput1;    // The user types the Rental ID here
-
+    @FXML
+    private TextField rentalIdInput11; // The TextField for the user to type the Rental ID to remove
     @FXML
     private ComboBox<String> ownerChoice1;
     @FXML
@@ -81,7 +83,7 @@ public class HostController implements Initializable {
         // 3) Wire up button actions
         addButton.setOnAction(this::onAddClicked);
         updateButton.setOnAction(this::onUpdateClicked);
-        removeButton.setOnAction(this::onCancelClicked);
+        removeButton.setOnAction(this::onRemoveClicked);
     }
 
     /**
@@ -227,14 +229,57 @@ public class HostController implements Initializable {
     }
 
     /**
-     * Called when user clicks "Cancel" (or "Remove") button.
-     * Often used to clear fields or handle remove logic.
+     * Called when user clicks the "Remove" button.
+     * It removes the record from the CSV based on the Rental ID.
      */
-    private void onCancelClicked(ActionEvent event) {
-        clearFields();
-        clearUpdateFields();
-        System.out.println("Cancel (Remove) button clicked. Fields cleared.");
+    private void onRemoveClicked(ActionEvent event) {
+        // 1) Read the Rental ID from the text field
+        String rentalIdToRemove = rentalIdInput11.getText().trim();
+
+        if (rentalIdToRemove.isEmpty()) {
+            System.out.println("Please enter a Rental ID before removing.");
+            return;
+        }
+
+        // 2) Read all lines from the CSV file
+        List<String> allLines = new ArrayList<>();
+        Path csvPath = Paths.get("src/main/resources/hoangvaha/frontend/sample/rental.csv");
+        try {
+            allLines = Files.readAllLines(csvPath);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return; // or show an alert, etc.
+        }
+
+        // 3) Find and remove the line that starts with the matching rental ID
+        //    (assuming the rentalId is in parts[0])
+        boolean removedAny = false;
+        Iterator<String> iterator = allLines.iterator();
+        while (iterator.hasNext()) {
+            String line = iterator.next();
+            String[] parts = line.split(",");
+            if (parts.length > 0 && parts[0].equals(rentalIdToRemove)) {
+                iterator.remove();
+                removedAny = true;
+            }
+        }
+
+        // 4) If we removed a line, write the new list back to CSV
+        if (removedAny) {
+            try {
+                Files.write(csvPath, allLines, StandardOpenOption.TRUNCATE_EXISTING);
+                System.out.println("Removed record(s) with Rental ID = " + rentalIdToRemove);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("No record found with Rental ID: " + rentalIdToRemove);
+        }
+
+        // 5) Clear the text field or any other UI as needed
+        rentalIdInput11.clear();
     }
+
 
     /**
      * Clears the fields from the "Add Rental" section.
