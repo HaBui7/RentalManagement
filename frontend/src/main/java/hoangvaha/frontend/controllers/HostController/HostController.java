@@ -1,4 +1,4 @@
-package hoangvaha.frontend.controllers;
+package hoangvaha.frontend.controllers.HostController;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
