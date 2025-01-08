@@ -9,8 +9,7 @@
 <?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-
-<AnchorPane prefHeight="750.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="750.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hoangvaha.frontend.controllers.HostController.HostNavBarController">
    <children>
       <HBox layoutX="14.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -37,7 +36,7 @@
                   </VBox>
                   <VBox prefHeight="459.0" prefWidth="350.0">
                      <children>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="100.0" prefWidth="350.0" style="-fx-background-color: #595656;" text="Home" textFill="WHITE">
+                        <Button fx:id="hostHomeButton" onAction="#handleHomePage" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="100.0" prefWidth="350.0" style="-fx-background-color: #595656;" text="Home" textFill="WHITE">
                            <graphic>
                               <FontIcon fill="WHITE" iconLiteral="bi-house-door" iconSize="40" text="" />
                            </graphic>
@@ -45,7 +44,7 @@
                               <Font size="25.0" />
                            </font>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="100.0" prefWidth="350.0" style="-fx-background-color: #595656;" text="Rental Agreement" textFill="WHITE">
+                        <Button fx:id="hostRentalButton" onAction="#handleRental" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="100.0" prefWidth="350.0" style="-fx-background-color: #595656;" text="Rental Agreement" textFill="WHITE">
                            <font>
                               <Font size="25.0" />
                            </font>
@@ -53,7 +52,7 @@
                               <FontIcon iconColor="WHITE" iconLiteral="bi-journal-text" iconSize="40" />
                            </graphic>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="100.0" prefWidth="350.0" style="-fx-background-color: #595656;" text="Property" textFill="WHITE">
+                        <Button fx:id="hostPropertyButton" onAction="#handleProperty" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="100.0" prefWidth="350.0" style="-fx-background-color: #595656;" text="Property" textFill="WHITE">
                            <font>
                               <Font size="25.0" />
                            </font>
@@ -61,7 +60,7 @@
                               <FontIcon iconColor="WHITE" iconLiteral="bi-building" iconSize="40" />
                            </graphic>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="100.0" prefWidth="350.0" style="-fx-background-color: #595656;" text="Other" textFill="WHITE">
+                        <Button fx:id="hostViewEntityButton" onAction="#handleEntity" alignment="BASELINE_LEFT" mnemonicParsing="false" prefHeight="100.0" prefWidth="350.0" style="-fx-background-color: #595656;" text="View Entity" textFill="WHITE">
                            <font>
                               <Font size="25.0" />
                            </font>
@@ -73,7 +72,6 @@
                   </VBox>
                </children>
             </VBox>
-            <VBox prefHeight="750.0" prefWidth="650.0" />
          </children>
       </HBox>
    </children>
