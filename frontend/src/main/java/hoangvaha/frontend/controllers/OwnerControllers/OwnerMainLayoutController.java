@@ -16,7 +16,7 @@ public class OwnerMainLayoutController {
 
     @FXML
     public void initialize() {
-        // The fx:include automatically loads the tenantNavBar.fxml, and JavaFX sets the controller.
+        // The fx:include automatically loads the visitorNavBar.fxml, and JavaFX sets the controller.
         navBarController.setMainController(this); // Link the MainLayoutController
         try {
             // Automatically load the homepage on initialization

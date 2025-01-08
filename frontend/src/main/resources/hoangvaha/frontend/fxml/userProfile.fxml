@@ -16,7 +16,7 @@
         <HBox prefHeight="750.0" prefWidth="1000.0" style="-fx-background-color: #ffffff; -fx-border-color: lightgray; -fx-border-radius: 10; -fx-background-radius: 10;">
             <children>
                 <!-- Include Navbar -->
-<!--                <fx:include source="tenantNavBar.fxml" />-->
+<!--                <fx:include source="visitorNavBar.fxml" />-->
 
                 <!-- Profile Section -->
                 <VBox alignment="CENTER" prefHeight="748.0" prefWidth="652.0" spacing="20" style="-fx-padding: 30;">

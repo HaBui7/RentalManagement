@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed3c3f2e-ea77-4743-a746-00e436b37720" name="Changes" comment="" />
+    <list default="true" id="ed3c3f2e-ea77-4743-a746-00e436b37720" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/frontend/src/main/resources/hoangvaha/frontend/fxml/host/hostManageRental.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main/resources/hoangvaha/frontend/fxml/host/hostManageRental.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,6 +64,7 @@
       <workItem from="1735619409457" duration="66000" />
       <workItem from="1735625116761" duration="107000" />
       <workItem from="1735804948469" duration="12000" />
+      <workItem from="1736306300609" duration="12000" />
     </task>
     <servers />
   </component>
